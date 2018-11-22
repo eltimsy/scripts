@@ -1,0 +1,5 @@
+psql ratemds;
+update doctors_doctorrating set deleted=false where id=668054;
+update doctors_doctorrating set deleted=false where id=3321291;
+update doctors_doctorrating set deleted=false where id=3339546;
+update doctors_doctorrating set deleted=false from (select id from doctors_doctorrating where doctor_id = 1883075 order by id desc limit 1) as t1 where doctors_doctorrating.id = t1.id;
